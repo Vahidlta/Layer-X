@@ -15,7 +15,8 @@
       margin: 0;
       padding: 0;
       font-family: 'Vazir', sans-serif;
-      background: linear-gradient(135deg, #0f172a, #1e293b);
+      background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQF4F_obBx9jbexEBwWcVBmLauAtUePwGHx8SA9aFnXLw&s=10') no-repeat center center fixed;
+      background-size: cover;
       color: #e2e8f0;
       display: flex;
       justify-content: center;
@@ -23,15 +24,24 @@
       min-height: 100vh;
     }
 
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(6px);
+    }
+
     .card {
+      position: relative;
       width: 90%;
       max-width: 420px;
-      background: rgba(255,255,255,0.05);
-      backdrop-filter: blur(12px);
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(14px);
       padding: 32px;
       border-radius: 20px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
       animation: fadeIn 1s ease;
+      z-index: 2;
     }
 
     @keyframes fadeIn {
@@ -49,7 +59,7 @@
     .subtitle {
       text-align: center;
       font-size: 14px;
-      opacity: 0.7;
+      opacity: 0.8;
       margin-bottom: 25px;
     }
 
@@ -61,14 +71,14 @@
       padding: 14px 18px;
       border-radius: 12px;
       text-decoration: none;
-      background: #1e293b;
+      background: rgba(30,41,59,0.8);
       color: #e2e8f0;
       transition: 0.25s;
       font-size: 16px;
     }
 
     .links a:hover {
-      background: #334155;
+      background: rgba(51,65,85,0.9);
       transform: translateY(-3px);
     }
 
@@ -90,6 +100,8 @@
 </head>
 
 <body>
+  <div class="overlay"></div>
+
   <div class="card">
     <h1>Layer‑X</h1>
     <p class="subtitle">Official Links</p>
